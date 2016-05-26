@@ -33,14 +33,7 @@ public class Telephone {
         }
         Matcher matcher = Pattern.compile("\\s*\\+?(\\d[\\s\\-\\(\\)\\+]{0,3}){11}").matcher(in);
         StringBuffer out = new StringBuffer();
-        while (matcher.find()) {
-            String number = matcher.group();
-            number = number.replaceAll("[^\\d]", "");
-            StringBuilder stringBuilder = new StringBuilder (number.replaceFirst("\\d", "1"));
-            number = stringBuilder.insert(0, " +").insert(3, " ").insert(4,"(").
-                    insert(8,") ").insert(13,"-").insert(16,"-").insert(19," ").toString();
-            matcher.appendReplacement(out, number);
-        }
+
         System.out.println(matcher.appendTail(out).toString());
     }
 }
