@@ -1,7 +1,3 @@
-/**
- * Created by user on 26.05.2016.
- */
-
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
@@ -17,7 +13,7 @@ public class Telephone {
     public Telephone(){
 
     }
-
+// добавить коммит
     public void fix(File file){
         String in="";
         int ch;
